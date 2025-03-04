@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:watshapp_ui/Screens/Login/loginscreen.dart';
 import 'package:watshapp_ui/Widgets/uihelper.dart';
 
 class OnBoardingScreen extends StatelessWidget{
@@ -33,7 +34,9 @@ class OnBoardingScreen extends StatelessWidget{
         ],),
       ),
       floatingActionButton: UiHelper.CustomButton(
-          callback: () {}, buttonname: "Agree and continue"),
+          callback: () {
+            Navigator.push(context,MaterialPageRoute(builder: (context)=>LoginScreen()));
+          }, buttonname: "Agree and continue"),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
